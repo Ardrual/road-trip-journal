@@ -1,0 +1,54 @@
+media:
+  input: images
+  output: /images
+
+content:
+  - name: itinerary
+    label: Itinerary
+    type: file
+    path: data/itinerary.json
+    fields:
+      - name: stops
+        label: Stops
+        type: object
+        list: true
+        fields:
+          - name: id
+            label: ID
+            type: string
+          - name: date
+            label: Date
+            type: string
+          - name: title
+            label: Title
+            type: string
+          - name: description
+            label: Description
+            type: text
+          - name: accommodation
+            label: Accommodation
+            type: string
+            required: false
+
+  - name: journal
+    label: Journal
+    type: file
+    path: data/journal.json
+    fields:
+      - name: entries
+        label: Entries
+        type: object
+        list: true
+        fields:
+          - name: stopId
+            label: Stop ID
+            type: string
+          - name: date
+            label: Date
+            type: date
+          - name: title
+            label: Title
+            type: string
+          - name: content
+            label: Content
+            type: rich-text
