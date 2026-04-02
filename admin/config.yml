@@ -1,0 +1,40 @@
+backend:
+  name: github
+  repo: your-username/trip-site # Change this to your repo when you push
+  branch: main # Or whatever your main branch is
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "itinerary"
+    label: "Itinerary"
+    files:
+      - label: "Stops"
+        name: "stops"
+        file: "data/itinerary.json"
+        fields:
+          - label: "Stops"
+            name: "stops"
+            widget: "list"
+            fields:
+              - {label: "ID (e.g. stop-1)", name: "id", widget: "string"}
+              - {label: "Date", name: "date", widget: "string"}
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Accommodation", name: "accommodation", widget: "string", required: false}
+  - name: "journal"
+    label: "Journal"
+    files:
+      - label: "Entries"
+        name: "entries"
+        file: "data/journal.json"
+        fields:
+          - label: "Entries"
+            name: "entries"
+            widget: "list"
+            fields:
+              - {label: "Stop ID (must match itinerary stop ID)", name: "stopId", widget: "string"}
+              - {label: "Date", name: "date", widget: "date", format: "YYYY-MM-DD"}
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Content", name: "content", widget: "markdown"}
