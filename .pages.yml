@@ -41,8 +41,23 @@ content:
         list: true
         fields:
           - name: stopId
-            label: Stop ID
-            type: string
+            label: Stop
+            type: select
+            options:
+              - { name: "stop-1", label: "Alpine -> Tucson -> Fort Stockton" }
+              - { name: "stop-2", label: "Wimberley / Austin (Family base)" }
+              - { name: "stop-3", label: "Wimberley -> Dallas" }
+              - { name: "stop-4", label: "Memphis" }
+              - { name: "stop-5", label: "Memphis -> Nashville" }
+              - { name: "stop-6", label: "Nashville -> Wilkesboro" }
+              - { name: "stop-7", label: "MerleFest" }
+              - { name: "stop-8", label: "Asheville" }
+              - { name: "stop-9", label: "Bristol" }
+              - { name: "stop-10", label: "Nashville (Full Week)" }
+              - { name: "stop-11", label: "Nashville -> Wimberley" }
+              - { name: "stop-12", label: "Wimberley / Austin / Hill Country" }
+              - { name: "stop-13", label: "Cheatham -> Kerrville" }
+              - { name: "stop-14", label: "Kerrville Folk Festival" }
           - name: date
             label: Date
             type: date
