@@ -9,7 +9,8 @@
     {
       "stopId": "stop-1",
       "date": "2026-04-13",
-      "title": "Test"
+      "title": "Test",
+      "content": "Some words"
     }
   ]
 }
