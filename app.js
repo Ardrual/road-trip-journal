@@ -8,9 +8,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     let dateToStopMap = {};
 
     try {
+        const timestamp = new Date().getTime();
         const [itineraryRes, journalRes] = await Promise.all([
-            fetch('./data/itinerary.json'),
-            fetch('./data/journal.json')
+            fetch(`./data/itinerary.json?v=${timestamp}`, { cache: "no-store" }),
+            fetch(`./data/journal.json?v=${timestamp}`, { cache: "no-store" })
         ]);
         
         const itineraryData = await itineraryRes.json();
