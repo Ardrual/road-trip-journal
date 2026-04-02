@@ -11,62 +11,59 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-    <div class="app-layout">
-        <!-- Sidebar / Timeline -->
-        <aside class="sidebar">
-            <header class="sidebar-header">
-                <h1>The Journey</h1>
-                <p>Alpine &rarr; Kerrville</p>
-            </header>
-            <nav class="timeline" id="timeline">
-                <!-- Timeline items injected by JS -->
-            </nav>
-        </aside>
-
-        <!-- Main Content Area -->
-        <main class="main-content">
-            <div id="stop-details" class="stop-details hidden">
-                <header class="content-header">
-                    <span class="meta-date" id="detail-date"></span>
-                    <h2 id="detail-title" class="title-serif"></h2>
-                </header>
-                
-                <div class="cards-grid">
-                    <div class="info-card map-card">
-                        <div class="card-icon"><i data-lucide="map"></i></div>
-                        <div class="card-body">
-                            <h3>The Plan</h3>
-                            <p id="detail-desc"></p>
-                        </div>
-                    </div>
-
-                    <div class="info-card tent-card" id="card-accommodation">
-                        <div class="card-icon"><i data-lucide="tent"></i></div>
-                        <div class="card-body">
-                            <h3>Accommodation</h3>
-                            <p id="detail-acc"></p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="journal-section">
-                    <div class="section-heading">
-                        <i data-lucide="book-open"></i>
-                        <h3>Journal</h3>
-                    </div>
-                    <div id="journal-entries" class="journal-entries">
-                        <!-- Journal entries injected by JS -->
-                    </div>
-                </div>
-            </div>
-            
-            <div id="empty-state" class="empty-state">
-                <i data-lucide="compass" class="empty-icon"></i>
-                <h2>Select a destination</h2>
-                <p>Explore the timeline to view itinerary details and field notes.</p>
-            </div>
-        </main>
+    <div id="screen-calendar" class="app-screen">
+        <header class="calendar-header">
+            <h1 class="title-serif">The Journey</h1>
+            <p>Alpine &rarr; Kerrville | Spring 2026</p>
+        </header>
+        <div class="calendar-container" id="calendar-container">
+            <!-- Calendars injected by JS -->
+        </div>
     </div>
+
+    <div id="screen-details" class="app-screen hidden">
+        <nav class="details-nav">
+            <button id="btn-back" class="btn-back">
+                <i data-lucide="arrow-left"></i> Back to Calendar
+            </button>
+        </nav>
+        
+        <div class="stop-details">
+            <header class="content-header">
+                <span class="meta-date" id="detail-date"></span>
+                <h2 id="detail-title" class="title-serif"></h2>
+            </header>
+            
+            <div class="cards-grid">
+                <div class="info-card map-card">
+                    <div class="card-icon"><i data-lucide="map"></i></div>
+                    <div class="card-body">
+                        <h3>The Plan</h3>
+                        <p id="detail-desc"></p>
+                    </div>
+                </div>
+
+                <div class="info-card tent-card" id="card-accommodation">
+                    <div class="card-icon"><i data-lucide="tent"></i></div>
+                    <div class="card-body">
+                        <h3>Accommodation</h3>
+                        <p id="detail-acc"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="journal-section">
+                <div class="section-heading">
+                    <i data-lucide="book-open"></i>
+                    <h3>Journal Entries</h3>
+                </div>
+                <div id="journal-entries" class="journal-entries">
+                    <!-- Journal entries injected by JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <script src="app.js"></script>
 </body>
 </html>
