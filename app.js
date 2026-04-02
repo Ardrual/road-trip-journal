@@ -24,7 +24,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         allStops.forEach(stop => {
             const dates = parseItineraryDates(stop.date);
             dates.forEach(d => {
-                const dateStr = d.toISOString().split('T')[0]; // YYYY-MM-DD
+                const dYear = d.getFullYear();
+                const dMonth = String(d.getMonth() + 1).padStart(2, '0');
+                const dDay = String(d.getDate()).padStart(2, '0');
+                const dateStr = `${dYear}-${dMonth}-${dDay}`;
                 dateToStopMap[dateStr] = stop;
             });
         });
@@ -125,15 +128,60 @@ function generateCalendar(dateMap, allEntries) {
         
         // Days
         for (let i = 1; i <= daysInMonth; i++) {
-            const dateStr = `${year}-${String(month.index + 1).padStart(2,'0')}-${String(i).padStart(2,'0')}`;
+            const padDate = (num) => String(num).padStart(2,'0');
+            const dateStr = `${year}-${padDate(month.index + 1)}-${padDate(i)}`;
             const stop = dateMap[dateStr];
             
             const cell = document.createElement('div');
             cell.className = 'day-cell';
-            cell.textContent = i;
+            
+            const dateNum = document.createElement('div');
+            dateNum.className = 'date-number';
+            dateNum.textContent = i;
+            cell.appendChild(dateNum);
             
             if (stop) {
                 cell.classList.add('active-stop');
+                
+                const prevDate = new Date(year, month.index, i - 1);
+                const nextDate = new Date(year, month.index, i + 1);
+                const prevDateStr = `${prevDate.getFullYear()}-${padDate(prevDate.getMonth()+1)}-${padDate(prevDate.getDate())}`;
+                const nextDateStr = `${nextDate.getFullYear()}-${padDate(nextDate.getMonth()+1)}-${padDate(nextDate.getDate())}`;
+                
+                const prevStop = dateMap[prevDateStr];
+                const nextStop = dateMap[nextDateStr];
+                
+                const currentDate = new Date(year, month.index, i);
+                const isWeekStart = currentDate.getDay() === 0;
+                const isWeekEnd = currentDate.getDay() === 6;
+                
+                const isStart = !prevStop || prevStop.id !== stop.id || i === 1;
+                const isEnd = !nextStop || nextStop.id !== stop.id || i === daysInMonth;
+                
+                if (isStart || isWeekStart) cell.classList.add('stop-start');
+                if (isEnd || isWeekEnd)   cell.classList.add('stop-end');
+                
+                cell.dataset.stopId = stop.id;
+                
+                if (isStart || isWeekStart) {
+                    const stopLabel = document.createElement('div');
+                    stopLabel.className = 'stop-label';
+                    stopLabel.textContent = stop.title;
+                    cell.appendChild(stopLabel);
+                }
+
+                cell.addEventListener('mouseenter', () => {
+                    document.querySelectorAll(`.day-cell[data-stop-id="${stop.id}"]`).forEach(c => {
+                        c.classList.add('hover-synced');
+                    });
+                });
+                
+                cell.addEventListener('mouseleave', () => {
+                    document.querySelectorAll(`.day-cell[data-stop-id="${stop.id}"]`).forEach(c => {
+                        c.classList.remove('hover-synced');
+                    });
+                });
+
                 cell.addEventListener('click', () => {
                     openDetails(stop, dateStr, allEntries);
                 });
