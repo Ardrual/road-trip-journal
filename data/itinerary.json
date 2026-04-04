@@ -9,90 +9,111 @@
     },
     {
       "id": "stop-2",
-      "date": "Apr 14–17",
+      "date": "Apr 14–15",
       "title": "Wimberley / Austin / Hill Country",
-      "description": "Family base. Cheatham Street Wednesday Apr 15 (sign up 8 PM, play 9). Austin scouting Thursday. Luckenbach picker circle if time allows. Rest/record Friday.",
-      "accommodation": "Family base"
+      "description": "Family base. Cheatham Street Wednesday Apr 15 (sign up 8 PM, play 9). After the show, drive toward Dallas. Luckenbach picker circle if time allows.",
+      "accommodation": "Family base through Apr 15. Cedar Hill SP primitive ($15) or rest stop overnight on departure."
     },
     {
       "id": "stop-3",
-      "date": "Apr 18",
-      "title": "Wimberley → Dallas area",
-      "description": "~200 miles, positioning day.",
-      "accommodation": "Texas rest stop overnight."
+      "date": "Apr 16",
+      "title": "Dallas → Bentonville, AR",
+      "description": "Drive north from Dallas area. Stop at Crystal Bridges Museum of American Art (free admission). ~340 miles total.",
+      "accommodation": "Devil's Den State Park, Loop A ($12, showers)."
     },
     {
       "id": "stop-4",
-      "date": "Apr 19–20",
-      "title": "Memphis",
-      "description": "Arrive Sunday via I-30/I-40. Sun Studio, Stax Museum, Beale Street, busk.",
-      "accommodation": "Two nights at T.O. Fuller State Park (~$25/night)."
+      "date": "Apr 17",
+      "title": "Bentonville → Branson, MO",
+      "description": "Scenic drive through the Ozarks. ~160 miles.",
+      "accommodation": "Table Rock State Park ($12–16, showers)."
     },
     {
       "id": "stop-5",
-      "date": "Apr 21",
-      "title": "Memphis → Nashville",
-      "description": "~210 miles, 3 hours. Afternoon scouting — neighborhoods, venues.",
-      "accommodation": "One night, Bells Bend (free) or Seven Points (~$25)."
+      "date": "Apr 18",
+      "title": "Branson → Hannibal, MO",
+      "description": "Mark Twain Boyhood Home & Museum ($20), cave tour, Mississippi River waterfront. ~200 miles.",
+      "accommodation": "Mark Twain Cave Campground ($25–35, showers/WiFi)."
     },
     {
       "id": "stop-6",
-      "date": "Apr 22",
-      "title": "Nashville → Wilkesboro",
-      "description": "~350 miles, 5.5 hours. Set up camp, get oriented.",
-      "accommodation": ""
+      "date": "Apr 19",
+      "title": "Hannibal → Richmond, IN",
+      "description": "Gennett Records Walk of Fame, Starr-Gennett exhibit at Reid Memorial Library. Evening at Firehouse BBQ & Blues. ~330 miles.",
+      "accommodation": "Grandpa's Farm ($20–25, showers) or Whitewater Memorial SP ($20–27)."
     },
     {
       "id": "stop-7",
+      "date": "Apr 20",
+      "title": "Kentucky — Clark Family History",
+      "description": "New Castle / Somerset / Monticello area. Renfro Valley if timing works (or catch on the return leg). ~200 miles.",
+      "accommodation": "Fishing Creek Campground, Lake Cumberland ($22–25, showers)."
+    },
+    {
+      "id": "stop-8",
+      "date": "Apr 21",
+      "title": "Kentucky → Wilkesboro, NC",
+      "description": "Cumberland Falls day stop — campground closed in 2026 but falls still open. Drive on to Wilkesboro and set up MerleFest camp. ~280 miles.",
+      "accommodation": "MerleFest camp."
+    },
+    {
+      "id": "stop-9",
+      "date": "Apr 22",
+      "title": "Wilkesboro — Buffer Day",
+      "description": "Rest and settle in before MerleFest opens. Explore town, walk the festival grounds.",
+      "accommodation": "MerleFest camp."
+    },
+    {
+      "id": "stop-10",
       "date": "Apr 23–26",
       "title": "MerleFest",
       "description": "Wilkesboro, NC. Pickin' Place jams, soak in the scene.",
       "accommodation": "Off-site camping (North Wilkesboro Speedway, Sewerfest, or W. Kerr Scott Reservoir fallback)."
     },
     {
-      "id": "stop-8",
+      "id": "stop-11",
       "date": "Apr 27–28",
       "title": "Asheville",
       "description": "90 min from Wilkesboro. Monday open mics: One World Brewing (7:30 sign-up), Jack of the Wood (9 PM). Tuesday: White Horse Black Mountain or UpCountry Brewing. Busk downtown.",
       "accommodation": "Pisgah NF dispersed camping, free."
     },
     {
-      "id": "stop-9",
+      "id": "stop-12",
       "date": "Apr 29",
       "title": "Bristol",
       "description": "Birthplace of Country Music Museum, Radio Bristol (ask about a live session), busk State Street.",
       "accommodation": "One night."
     },
     {
-      "id": "stop-10",
+      "id": "stop-13",
       "date": "Apr 30–May 7",
       "title": "Nashville",
       "description": "Full week. Commodore Grille open mics (Sun/Mon/Wed/Thu, sign up 5:45 PM). Bluebird Cafe Monday May 4 (sign up online 11:00 AM CT sharp). Music Row Freak Show Wednesday May 6. Busk East Nashville, 12 South, Five Points. Scout housing/neighborhoods. Deadlines: Golden Pick submission May 1. Rocky Mountain Folks Fest Songwriter Showcase ~May 6.",
       "accommodation": "Bells Bend or Seven Points base camp."
     },
     {
-      "id": "stop-11",
+      "id": "stop-14",
       "date": "May 8–9",
       "title": "Nashville → Wimberley",
       "description": "Two days via Little Rock. I-40 to I-30 to I-35.",
       "accommodation": "Arkansas rest stop or Ozark NF overnight. Free."
     },
     {
-      "id": "stop-12",
+      "id": "stop-15",
       "date": "May 10–19",
       "title": "Wimberley / Austin / Hill Country",
       "description": "Family base. Austin open mics. Cheatham Street Wednesday May 13. Luckenbach picker circles. Austin Songwriters Group events. Annotation work, recording, set prep for Kerrville.",
       "accommodation": "Book McKinney Falls for late nights, ~$20/night."
     },
     {
-      "id": "stop-13",
+      "id": "stop-16",
       "date": "May 20",
       "title": "Cheatham Street → Kerrville",
       "description": "Third Cheatham Street visit — dress rehearsal of Kerrville set. Drive to Quiet Valley Ranch (~1.5 hrs from San Marcos).",
       "accommodation": ""
     },
     {
-      "id": "stop-14",
+      "id": "stop-17",
       "date": "May 21–Jun 7",
       "title": "Kerrville Folk Festival",
       "description": "Quiet Valley Ranch, Kerrville, TX. Tickets purchased. Campground culture. New Folk Competition May 23–24 (attend as audience, submit for 2027). Up to 18 days.",
